@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ProductsSection = styled.div`
+  height: 800px;
   padding: 100px 0 160px;
   display: flex;
   flex-direction: column;
@@ -10,48 +11,42 @@ export const ProductsSection = styled.div`
 `;
 
 export const ProductsWrapper = styled.div`
-  display: flex;
+  display: grid;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  @media screen and (max-width: 960px) {
-    margin: 0 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
 }
 `;
 
 export const ProductsHeading = styled.h1`
   color: rgb(235, 151, 49);
   font-size: 48px;
-  margin-bottom: 24px;
+  margin-bottom: 100px;
+
+  text-align: center;
 `;
 
 export const ProductsContainer = styled.div`
   max-width: 1360px;
+  height: 500px;
   margin: 0;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
-  @media screen and (max-width: 1360px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media screen and (max-width: 1056px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media screen and (max-width: 780px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 540px) {
-    grid-template-columns: repeat(1, 1fr);
+
+  @media screen and (max-width: 1318px) {
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
   }
 `;
 
 export const ProductsCard = styled(Link)`
   background: rgb(235, 151, 49);
-
+  display: grid;
+  grid-template-rows: min-content;
   width: 250px;
   height: 450px;
   text-decoration: none;
@@ -114,9 +109,6 @@ export const Img = styled.img`
   padding-bottom: 3px;
   transition: all 0.5s ease-out;
   max-width: 100%;
-
-  display: inline-block;
-  max-height: 200px;
 
   &:hover {
     transform: scale(1.05);
