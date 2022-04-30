@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ProductsSection = styled.div`
   height: 800px;
+  margin-top: 60px;
   padding: 100px 0 160px;
   display: flex;
   flex-direction: column;
@@ -40,10 +40,12 @@ export const ProductsContainer = styled.div`
     grid-auto-columns: 21%;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
   }
 `;
 
-export const ProductsCard = styled(Link)`
+export const ProductsCard = styled.div`
   background: rgb(235, 151, 49);
   display: grid;
   grid-template-rows: min-content;
@@ -52,6 +54,7 @@ export const ProductsCard = styled(Link)`
   text-decoration: none;
   border-radius: 4px;
 
+  scroll-snap-align: start;
   &:hover {
     transform: scale(1.009);
   }

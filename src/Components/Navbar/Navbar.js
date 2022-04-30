@@ -71,14 +71,18 @@ const Navbar = () => {
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/">
-                    <NavButton>Shop Now</NavButton>
+                  <NavBtnLink>
+                    <a href="https://citrus-kings-hockey.myshopify.com/">
+                      <NavButton>Shop Now</NavButton>
+                    </a>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to="/">
-                    <NavButton onClick={closeMobileMenu} fontBig>
-                      Shop
-                    </NavButton>
+                  <NavBtnLink>
+                    <a href="https://citrus-kings-hockey.myshopify.com/">
+                      <NavButton onClick={closeMobileMenu} fontBig>
+                        Shop
+                      </NavButton>
+                    </a>
                   </NavBtnLink>
                 )}
               </NavItemBtn>

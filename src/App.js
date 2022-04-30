@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./Components/ScrollToTop";
 import Home from "./pages/HomePage/Home";
+import { Footer } from "./Components";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         {/*Sponsours page*/}
         {/*Shop page*/}
       </Routes>
+      <Footer />
     </Router>
   );
 }

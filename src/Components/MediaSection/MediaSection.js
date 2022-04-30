@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import { Button, Container } from "../../styles/globalStyles";
+import { Link } from "react-router-dom";
+import ImageSlider from "./Slider/ImageSlider";
+import { SliderData } from "./Slider/SliderData";
 import {
   InfoSec,
   InfoRow,
@@ -11,10 +12,9 @@ import {
   Heading,
   Subtitle,
   ImgWrapper,
-  Img,
-} from "./InfoSection.elements";
+} from "./MediaSection.elements";
 
-const InfoSection = ({
+const MediaSection = ({
   primary,
   lightBg,
   topLine,
@@ -24,11 +24,7 @@ const InfoSection = ({
   headline,
   description,
   buttonLabel,
-  img,
-
-  alt,
   imgStart,
-  start,
 }) => {
   return (
     <InfoSec lightBg={lightBg}>
@@ -39,7 +35,7 @@ const InfoSection = ({
               <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
               <Heading lightText={lightText}>{headline}</Heading>
               <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-              <Link to="/Home">
+              <Link to="/">
                 <Button big fontBig primary={primary}>
                   {buttonLabel}
                 </Button>
@@ -47,8 +43,8 @@ const InfoSection = ({
             </TextWrapper>
           </InfoColumn>
           <InfoColumn>
-            <ImgWrapper start={start}>
-              <Img src={img} alt={alt} />
+            <ImgWrapper>
+              <ImageSlider slides={SliderData} />
             </ImgWrapper>
           </InfoColumn>
         </InfoRow>
@@ -57,4 +53,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default MediaSection;

@@ -1,17 +1,41 @@
 import React from "react";
-import { InfoSection } from "../../Components";
+import InfoSection from "../../Components/InfoSection/InfoSection";
 import Products from "../../Components/Products/Products";
-import ImageSlider from "../../Components/Slider/ImageSlider";
-import { SliderData } from "../../Components/Slider/SliderData";
+import Events from "../../Components/Events/Events";
+import MediaSection from "../../Components/MediaSection/MediaSection";
+import { homeObjEvents, homeObjOne, homeObjShop, homeObjTwo } from "./Data";
+import "./Home.css";
 
-import { homeObjOne, homeObjShop, homeObjTwo } from "./Data";
+function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(false);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+  }, []);
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
 
 const Home = () => (
   <>
     <InfoSection {...homeObjOne} />
-    <ImageSlider slides={SliderData} />
-    <InfoSection {...homeObjTwo} />
-    <Products {...homeObjShop} />
+    <FadeInSection>
+      <Events {...homeObjEvents} />
+    </FadeInSection>
+
+    <MediaSection {...homeObjTwo} />
+    <FadeInSection>
+      <Products {...homeObjShop} />
+    </FadeInSection>
   </>
 );
 

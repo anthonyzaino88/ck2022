@@ -16,14 +16,14 @@ import {
   Img,
 } from "./Products.elements";
 
-const Products = ({ img1, img2, img3, img4, img5, alt, start }) => {
+const Products = ({ img1, img2, img3, img4, img5, alt }) => {
   return (
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
       <ProductsSection>
         <ProductsWrapper>
           <ProductsHeading>CK Shop</ProductsHeading>
           <ProductsContainer>
-            <ProductsCard to="https://citrus-kings-hockey.myshopify.com/products/ck-hockey-short-sleeve-tee">
+            <ProductsCard>
               <ProductsCardInfo>
                 <ProductsCardIcon>
                   <Img src={img1} alt={alt} />
@@ -35,10 +35,13 @@ const Products = ({ img1, img2, img3, img4, img5, alt, start }) => {
                     New Merch Avalible Now!
                   </ProductsCardFeatureAlert>
                 </ProductsCardFeatures>
-                <ShopButton big>Buy Now</ShopButton>
+
+                <a href="https://citrus-kings-hockey.myshopify.com/products/sick-celly-tee">
+                  <ShopButton big>Buy Now</ShopButton>
+                </a>
               </ProductsCardInfo>
             </ProductsCard>
-            <ProductsCard to="https://citrus-kings-hockey.myshopify.com/products/sick-celly-tee">
+            <ProductsCard>
               <ProductsCardInfo>
                 <ProductsCardIcon>
                   <Img src={img2} alt={alt} />
@@ -50,10 +53,12 @@ const Products = ({ img1, img2, img3, img4, img5, alt, start }) => {
                     New Merch Avalible Now!
                   </ProductsCardFeatureAlert>
                 </ProductsCardFeatures>
-                <ShopButton big>Buy Now</ShopButton>
+                <a href="https://citrus-kings-hockey.myshopify.com/products/ck-hockey-short-sleeve-tee">
+                  <ShopButton big>Buy Now</ShopButton>
+                </a>
               </ProductsCardInfo>
             </ProductsCard>
-            <ProductsCard to="https://citrus-kings-hockey.myshopify.com/products/no-pulp-short-sleeve-tee">
+            <ProductsCard>
               <ProductsCardInfo>
                 <ProductsCardIcon>
                   <Img src={img3} alt={alt} />
@@ -65,10 +70,12 @@ const Products = ({ img1, img2, img3, img4, img5, alt, start }) => {
                     New Merch Avalible
                   </ProductsCardFeatureAlert>
                 </ProductsCardFeatures>
-                <ShopButton big>Buy Now</ShopButton>
+                <a href="https://citrus-kings-hockey.myshopify.com/products/unisex-jersey-short-sleeve-tee-2">
+                  <ShopButton big>Buy Now</ShopButton>
+                </a>
               </ProductsCardInfo>
             </ProductsCard>
-            <ProductsCard to="https://citrus-kings-hockey.myshopify.com/products/no-pulp-short-sleeve-tee">
+            <ProductsCard>
               <ProductsCardInfo>
                 <ProductsCardIcon>
                   <Img src={img4} alt={alt} />
@@ -80,10 +87,12 @@ const Products = ({ img1, img2, img3, img4, img5, alt, start }) => {
                     New Merch Avalible
                   </ProductsCardFeatureAlert>
                 </ProductsCardFeatures>
-                <ShopButton big>Buy Now</ShopButton>
+                <a href="https://citrus-kings-hockey.myshopify.com/products/no-pulp-short-sleeve-tee">
+                  <ShopButton big>Buy Now</ShopButton>
+                </a>
               </ProductsCardInfo>
             </ProductsCard>
-            <ProductsCard to="https://citrus-kings-hockey.myshopify.com/products/no-pulp-short-sleeve-tee">
+            <ProductsCard>
               <ProductsCardInfo>
                 <ProductsCardIcon>
                   <Img src={img5} alt={alt} />
@@ -95,7 +104,9 @@ const Products = ({ img1, img2, img3, img4, img5, alt, start }) => {
                     New Merch Avalible
                   </ProductsCardFeatureAlert>
                 </ProductsCardFeatures>
-                <ShopButton big>Buy Now</ShopButton>
+                <a href="https://citrus-kings-hockey.myshopify.com/products/unisex-jersey-short-sleeve-tee-1">
+                  <ShopButton big>Buy Now</ShopButton>
+                </a>
               </ProductsCardInfo>
             </ProductsCard>
           </ProductsContainer>

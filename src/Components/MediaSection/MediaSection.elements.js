@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 export const InfoSec = styled.div`
   color: #fff;
-  margin-top: 120px;
+  margin-top: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#a6a9ae")};
 `;
 
@@ -39,7 +42,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const ImgWrapper = styled.div`
-  max-width: 555px;
+  max-width: 560px;
   display: flex;
   justify-content: ${({ start }) => (start ? "flex-start" : "flex-end")};
 `;

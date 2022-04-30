@@ -84,6 +84,7 @@ export const NavItem = styled.li`
 export const NavItemBtn = styled.li`
   @media screen and (max-width: 960px) {
     display: flex;
+    text-decoration: none;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -110,7 +111,7 @@ export const NavLinks = styled(Link)`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

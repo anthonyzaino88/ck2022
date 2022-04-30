@@ -11,6 +11,7 @@ export const homeObjOne = {
   buttonLabel: "More Info",
   imgStart: "start",
   img: require("../../images/ckkings.png"),
+
   alt: "Citrus kings Banner",
   start: "",
 };
@@ -28,6 +29,18 @@ export const homeObjTwo = {
   buttonLabel: "Learn more",
   imgStart: "",
   img: require("../../images/ckc3.jpg"),
+  alt: "Team",
+  start: "",
+};
+
+export const homeObjEvents = {
+  primary: false,
+  lightBg: true,
+  lightTopLine: true,
+  topLine: "Torhs Nationals Warm Up",
+  buttonLabel: "Learn more",
+  imgStart: "",
+  img: require("../../images/flcup.png"),
   alt: "Team",
   start: "",
 };
